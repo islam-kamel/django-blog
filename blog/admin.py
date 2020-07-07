@@ -6,4 +6,8 @@ from import_export.admin import ImportExportModelAdmin
 class PostImportExport(ImportExportModelAdmin):
     pass
 # admin.site.register(Post)
-admin.site.register(comment)
+
+@admin.register(comment)
+class CommentImportExport(ImportExportModelAdmin):
+    pass
+# admin.site.register(comment)
