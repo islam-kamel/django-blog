@@ -26,6 +26,10 @@
         <a href="{% url 'detail' post.id %}"> <button class="btn badge-primary"> أقراء المزيد</button></a>
     </div>
 </div>
+{% empty %}
+<div >
+  <h4>أنت اول زائر في المدونة قم <span><a href='{% url "login" %}'>بتسجيل الدخول الأن</a> وقم بمشاركة أول تدوينة </span></h4>
+</div>
 {% endfor %}
 {% include 'blog/pagination.html' with page=posts %}
 {% endblock content %}

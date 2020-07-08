@@ -3,5 +3,8 @@
   <li class="latest-post-item list-group-item">
     <a class="text-dark" href="{% url 'detail' post.id %}">{{post.title}}</a>
   </li>
+  {% empty %}
+    <li class="latest-comment-item list-group-item pr-0">لا يوجد تدوينات !</li>
+
   {% endfor %}
 </ul>
