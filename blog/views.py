@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Post , comment 
+from .models import Post , Comment
 from .forms import NewComment , PostCreateView ,PostUpdateView
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.views.generic import CreateView, UpdateView, DeleteView

@@ -1,5 +1,5 @@
 from django import template
-from blog.models import Post , comment
+from blog.models import Post , Comment
 
 register = template.Library()
 
@@ -16,7 +16,7 @@ def latest_posts():
 def latest_comments():
 
     context = {
-        'l_comment' : comment.objects.filter(active=True)[:5],
+        'l_comment' : Comment.objects.filter(active=True)[:5],
 
     }
 

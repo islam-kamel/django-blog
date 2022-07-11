@@ -1,5 +1,5 @@
 from django import forms
-from .models import comment,Post
+from .models import Comment,Post
 
 class NewComment(forms.ModelForm):
     name =  forms.CharField()
@@ -7,7 +7,7 @@ class NewComment(forms.ModelForm):
     body = forms.CharField(widget=forms.Textarea)
 
     class Meta:
-        model = comment
+        model = Comment
         fields = ('name', 'email', 'body')
 
     def comment_clean(self):
